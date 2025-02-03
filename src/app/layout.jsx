@@ -19,6 +19,7 @@ import { CheckoutProvider } from "@/contexts/CheckoutContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import FloatingLeadButton from "@/components/FloatingLeadButton";
 import { RegionProvider } from "@/contexts/RegionContext";
+import SplashScreen from "@/components/SplashScreen";
 
 const nord = localFont({
   src: [
@@ -85,7 +86,7 @@ export default function RootLayout({ children }) {
                   <RegionProvider>
                     <DesktopNavbar />
                     <MobileNavbar />
-
+                    <SplashScreen />
                     <main>
                       {children} <FloatingLeadButton />
                     </main>
