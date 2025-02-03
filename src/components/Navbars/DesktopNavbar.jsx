@@ -17,8 +17,6 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { searchPackages } from "@/utils/firebase";
 import { useDebounce } from "@/hooks/useDebounce";
-import { useRegions } from "@/contexts/RegionContext";
-import SplashScreen from "../SplashScreen";
 
 const DesktopNavbar = () => {
   const inputRef = useRef(null);
@@ -33,7 +31,6 @@ const DesktopNavbar = () => {
   const debouncedSearch = useDebounce(searchTerm, 500);
   const pathname = usePathname();
   const [isHeaderFixed, setIsHeaderFixed] = useState(true);
-  const { regionIsLoading } = useRegions();
 
   useEffect(() => {
     setIsHeaderFixed(!pathname?.includes("packages"));
@@ -141,7 +138,6 @@ const DesktopNavbar = () => {
           }
         )}
       >
-        {regionIsLoading && <SplashScreen />}
         <Container>
           <style jsx global>{`
             @keyframes slideFromLeft {
