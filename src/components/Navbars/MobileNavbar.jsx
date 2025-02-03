@@ -19,8 +19,8 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { searchPackages } from "@/utils/firebase";
 import { useDebounce } from "@/hooks/useDebounce";
-import { useRegions } from "@/contexts/RegionContext";
-import SplashScreen from "../SplashScreen";
+// import { useRegions } from "@/contexts/RegionContext";
+// import SplashScreen from "../SplashScreen";
 
 const MobileNavbar = () => {
   const inputRef = useRef(null);
@@ -34,7 +34,7 @@ const MobileNavbar = () => {
   const debouncedSearch = useDebounce(searchTerm, 500);
   const [isHeaderFixed, setIsHeaderFixed] = useState(true);
   const pathname = usePathname();
-  const { regionIsLoading } = useRegions();
+  // const { regionIsLoading } = useRegions();
 
   useEffect(() => {
     setIsHeaderFixed(!pathname?.includes("packages"));
@@ -93,7 +93,7 @@ const MobileNavbar = () => {
           }
         )}
       >
-        {regionIsLoading && <SplashScreen />}
+        {/* {regionIsLoading && <SplashScreen />} */}
         <Container>
           <div
             className={cn(

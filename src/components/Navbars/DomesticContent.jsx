@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRegions } from "@/contexts/RegionContext";
+// import { useRegions } from "@/contexts/RegionContext";
 
 const DomesticContent = ({
   setActiveDropdown,
@@ -8,7 +8,7 @@ const DomesticContent = ({
   handleIsDropdownActive,
   handleMenuActive,
 }) => {
-  const { domesticRegions } = useRegions();
+  // const { domesticRegions } = useRegions();
 
   if (!domesticRegions || domesticRegions.length === 0)
     return <div>No Regions</div>;
@@ -22,7 +22,7 @@ const DomesticContent = ({
 
   return (
     <div className="mx-auto max-w-screen-lg py-8 c-lg:p-8">
-      <ul className="grid gap-6 c-sm:grid-cols-2 c-md:grid-cols-3 c-lg:grid-cols-4">
+      {/* <ul className="grid gap-6 c-sm:grid-cols-2 c-md:grid-cols-3 c-lg:grid-cols-4">
         {domesticRegions.map((region) => (
           <li key={region.id}>
             <Link
@@ -34,7 +34,8 @@ const DomesticContent = ({
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
+      Hello
     </div>
   );
 };
