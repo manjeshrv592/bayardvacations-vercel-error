@@ -18,7 +18,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { CheckoutProvider } from "@/contexts/CheckoutContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import FloatingLeadButton from "@/components/FloatingLeadButton";
-// import { RegionProvider } from "@/contexts/RegionContext";
+import { RegionProvider } from "@/contexts/RegionContext";
 
 const nord = localFont({
   src: [
@@ -82,17 +82,17 @@ export default function RootLayout({ children }) {
             <CheckoutProvider>
               <PackageProvider>
                 <PackageInitializer>
-                  {/* <RegionProvider> */}
-                  <DesktopNavbar />
-                  <MobileNavbar />
+                  <RegionProvider>
+                    <DesktopNavbar />
+                    <MobileNavbar />
 
-                  <main>
-                    {children} <FloatingLeadButton />
-                  </main>
-                  <LeadForm />
-                  <Toaster />
-                  <Footer />
-                  {/* </RegionProvider> */}
+                    <main>
+                      {children} <FloatingLeadButton />
+                    </main>
+                    <LeadForm />
+                    <Toaster />
+                    <Footer />
+                  </RegionProvider>
                 </PackageInitializer>
               </PackageProvider>
             </CheckoutProvider>
