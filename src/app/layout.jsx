@@ -18,8 +18,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { CheckoutProvider } from "@/contexts/CheckoutContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import FloatingLeadButton from "@/components/FloatingLeadButton";
-import { RegionProvider, regionIsLoading } from "@/contexts/RegionContext";
-import SplashScreen from "@/components/SplashScreen";
+import { RegionProvider } from "@/contexts/RegionContext";
 
 const nord = localFont({
   src: [
@@ -86,7 +85,7 @@ export default function RootLayout({ children }) {
                   <RegionProvider>
                     <DesktopNavbar />
                     <MobileNavbar />
-                    {regionIsLoading && <SplashScreen />}
+
                     <main>
                       {children} <FloatingLeadButton />
                     </main>
