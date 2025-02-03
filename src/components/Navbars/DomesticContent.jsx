@@ -1,7 +1,13 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
 // import { useRegions } from "@/contexts/RegionContext";
 
+// const DomesticContent = ({
+//   setActiveDropdown,
+//   handleActiveItem,
+//   handleIsDropdownActive,
+//   handleMenuActive,
+// }) => {
 const DomesticContent = ({
   setActiveDropdown,
   handleActiveItem,
@@ -10,15 +16,15 @@ const DomesticContent = ({
 }) => {
   // const { domesticRegions } = useRegions();
 
-  if (!domesticRegions || domesticRegions.length === 0)
-    return <div>No Regions</div>;
+  // if (!domesticRegions || domesticRegions.length === 0)
+  //   return <div>No Regions</div>;
 
-  const handleClose = () => {
-    setActiveDropdown && setActiveDropdown(null);
-    handleActiveItem && handleActiveItem(null);
-    handleIsDropdownActive && handleIsDropdownActive();
-    handleMenuActive && handleMenuActive();
-  };
+  // const handleClose = () => {
+  //   setActiveDropdown && setActiveDropdown(null);
+  //   handleActiveItem && handleActiveItem(null);
+  //   handleIsDropdownActive && handleIsDropdownActive();
+  //   handleMenuActive && handleMenuActive();
+  // };
 
   return (
     <div className="mx-auto max-w-screen-lg py-8 c-lg:p-8">
